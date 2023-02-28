@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The-Sudo-Studio</title>
 </head>
+
 <body>
     {{!-- navbar--}}
     <nav>
@@ -20,15 +22,18 @@
                 background-color: #333;
                 overflow: hidden;
             }
+
             nav ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
             }
+
             nav li {
                 float: left;
             }
+
             nav li a {
                 display: block;
                 color: white;
@@ -36,6 +41,7 @@
                 padding: 14px 16px;
                 text-decoration: none;
             }
+
             nav li a:hover {
                 background-color: #111;
             }
@@ -45,7 +51,7 @@
     <header>
         <h1>The Sudo Studio</h1>
         <h2>A tech blog for tech people.</h2>
-        {{!-- styling for header  --}}
+        {{!-- styling for header --}}
         <style>
             header {
                 background-color: #333;
@@ -59,7 +65,7 @@
     {{!-- Blog content --}}
     <main class="main-container">
         {{{body}}}
-        {{!-- styling for main  --}}
+        {{!-- styling for main --}}
         <style>
             .main-container {
                 margin: 0 auto;
@@ -67,34 +73,61 @@
                 padding: 20px;
             }
         </style>
-{{#if logged_in}}
-<button id="logout">Logout</button>
-  <script src="/js/logout.js"></script>
-  {{!-- styling for button --}}
-    <style>
-        #logout {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 5px;
-            width: 25%;
-        }
-        #logout:hover {
-            background-color: #111;
-        }
-    </style>
+        {{#if logged_in}}
+        <button id="logout">Logout</button>
+        <script src="/js/logout.js"></script>
+        {{!-- styling for button --}}
+        <style>
+            #logout {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+                width: 25%;
+            }
 
+            #logout:hover {
+                background-color: #111;
+            }
+        </style>
+        {{!-- button to add new blogpost --}}
+        <div>
+            <button class="add-blog">Add post</button>
+        </div>
+        {{!-- styling for button --}}
+        <style>
+            .add-blog {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+                width: 25%;
+            }
 
-{{/if}}
+            .add-blog:hover {
+                background-color: #111;
+            }
+        </style>
+
+        {{/if}}
 
     </main>
 </body>
+
 </html>
