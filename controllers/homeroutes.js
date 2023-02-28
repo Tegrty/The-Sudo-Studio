@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
                 {
                     model: User,
                     attributes: ['name'], 
-                    attributes: ['date_created'],
+                    // attributes: ['date_created'],
                 },
             ],
         });
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
         // Pass serialized data and session flag into template
         res.render('homepage', { 
             blogs, 
-            logged_in: req.session.logged_in // This is the session flag that is set in the login route. 
+            // logged_in: req.session.logged_in // This is the session flag that is set in the login route. 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -45,7 +45,7 @@ router.get('/blog/:id', async (req, res) => {
 
         res.render('blog', {
             ...blog,
-            logged_in: req.session.logged_in
+            // logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);

@@ -34,7 +34,7 @@ Blog.init( // This is the model for the blog table
     },
     {
         sequelize,
-        timestamps: false, // timestamps refers to the date_created column
+        timestamps: false, // This is to prevent sequelize from automatically adding the timestamp columns
         freezeTableName: true,
         underscored: true,
         modelName: 'blog'
