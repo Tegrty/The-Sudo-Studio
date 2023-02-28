@@ -15,9 +15,9 @@ Blog.init( // This is the model for the blog table
             type: DataTypes.STRING,
             allowNull: false
         },
-        content: {
+        content: { 
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
         },
         date_created: {
             type: DataTypes.DATE,
