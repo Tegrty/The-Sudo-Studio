@@ -1,1 +1,43 @@
 {{!-- dashboard to display users posts --}}
+<div class="welcome">
+    <h1>Welcome {{name}}!</h1>
+    <h2>Here are your posts:</h2>
+</div>
+{{!-- styling for welcome --}}
+<style>
+    .welcome {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+    }
+</style>
+{{!-- display each blog post made by the logged in user --}}
+
+
+{{!-- button to add new blogpost --}}
+<div>
+    <button class="add-blog">Add post</button>
+</div>
+{{!-- styling for add-blog --}}
+<style>
+        .add-blog {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            width: 25%;
+        }
+        .add-blog:hover {
+            background-color: #111;
+        }
+</style>
