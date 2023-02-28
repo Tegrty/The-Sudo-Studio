@@ -1,5 +1,21 @@
 {{!-- Loop over each object in the blog array --}}
 {{#each blogs}}
-    <h1>{{title}}</h1>
+<div>
+    <h2>{{title}}</h2>
+    <h3>Created by:{{user.name}} on {{format_date date_created}}</h3>
     <p>{{content}}</p>
+    <a href="/blog/{{_id}}">View Post</a>
+</div>
+
+{{!-- styling for div --}}
+<style>
+    div {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+    }
+</style>
 {{/each}}
+

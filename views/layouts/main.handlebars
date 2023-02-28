@@ -7,13 +7,69 @@
     <title>The-Sudo-Studio</title>
 </head>
 <body>
+    {{!-- navbar--}}
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/login">Signup/Login</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+        {{!-- styling for navbar --}}
+        <style>
+            nav {
+                background-color: #333;
+                overflow: hidden;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            nav li {
+                float: left;
+            }
+            nav li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            nav li a:hover {
+                background-color: #111;
+            }
+        </style>
+    </nav>
     {{!-- Blog header --}}
     <header>
         <h1>The Sudo Studio</h1>
+        <h2>A tech blog for tech people.</h2>
+        {{!-- styling for header  --}}
+        <style>
+            header {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+
     </header>
     {{!-- Blog content --}}
-    <main>
-        {{{ body }}}
+    <main class="main-container">
+        {{{body}}}
+        {{!-- styling for main  --}}
+        <style>
+            .main-container {
+                margin: 0 auto;
+                width: 80%;
+                padding: 20px;
+            }
+        </style>
+
+
     </main>
 </body>
 </html>
