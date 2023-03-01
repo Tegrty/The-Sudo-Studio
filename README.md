@@ -19,6 +19,8 @@ The Sudo Studio is a FULL STACK web application using the MVC framework to deliv
 
 > Or simply visit the deployed application on Heroku [here](https://the-sudo-studio.herokuapp.com/).
 
+ ![image](/assets/the-sudo-studio.gif)  
+
 ## Technologies Used 🛠️
 
 * [Node.js](https://nodejs.org/en/)
