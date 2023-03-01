@@ -1,7 +1,7 @@
 {{!-- form to create a new blogpost including inputs for title and content --}}
 <div class="new-post" id="new-post">
     <h2>Create a new post</h2>
-    <form method="POST" class="new-blog-form">
+    <form action="/api/blogs" method="POST" class="new-blog-form">
         <label for="title">Title</label>
         <input type="text" name="title" id="blog-title">
         <label for="content">Content</label>
@@ -10,7 +10,8 @@
     </form>
 </div>
 
-<style>.new-post {
+<style>
+  .new-post {
   max-width: 600px;
   margin: 0 auto;
   padding: 40px;
@@ -34,7 +35,7 @@
   color: #333;
 }
 
-.new-blog-form input[type="text"] {
+.new-blog-form input {
   display: block;
   width: 100%;
   padding: 10px;
@@ -45,7 +46,7 @@
   margin-bottom: 20px;
 }
 
-.new-blog-form button[type="submit"] {
+.new-blog-form button {
   display: inline-block;
   padding: 10px 20px;
   border: none;
@@ -57,7 +58,7 @@
   transition: background 0.3s;
 }
 
-.new-blog-form button[type="submit"]:hover {
+.new-blog-form button:hover {
   background: #111;
 }
 </style>
