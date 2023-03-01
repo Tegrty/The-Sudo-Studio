@@ -5,13 +5,31 @@
 </div>
 {{!-- styling for welcome --}}
 <style>
-    .welcome {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        margin: 10px;
-    }
+.welcome {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: #333;
+}
+
+.welcome h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.welcome h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
 </style>
 {{!-- display each blog post made by the logged in user --}}
 {{#each blogs}}
@@ -22,13 +40,36 @@
 </div>
 {{!-- styling for div --}}
 <style>
-    #user-post {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        margin: 10px;
-    }
+#user-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+#user-post h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#user-post h3 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #999;
+}
+
+#user-post p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
 </style>
 
 {{/each}}
