@@ -3,7 +3,7 @@ const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-// Post route for creating a new blog
+// Post route for creating a new blog.
 
 router.post('/', withAuth, async (req, res) => {
     try {
@@ -17,6 +17,8 @@ router.post('/', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+
 
 // Delete route for deleting a blog
 
@@ -40,6 +42,16 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
+// get route for rendering post.handlebars
+router.get('/post', withAuth, async (req, res) => {
+    try {
+        res.render('post', {
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 
 module.exports = router;

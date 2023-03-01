@@ -31,8 +31,35 @@
     }
 </style>
 
-
 {{/each}}
 
+{{#if logged_in}}
+        {{!-- button to add new blogpost and navigate to api/blogs/post --}}
+        <a href="/api/blogs/post" class="add-blog">Add New Blog Post</a>
+        
+   
+        {{!-- styling for button --}}
+        <style>
+            .add-blog {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5px;
+                width: 25%;
+            }
+
+            .add-blog:hover {
+                background-color: #111;
+            }
+        </style>
+ {{/if}}
 
 
